@@ -1,0 +1,30 @@
+{
+  "name": "pink-parsec",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro preferences disable devToolbar "
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "^4.2.1",
+    "@astrojs/preact": "^3.1.0",
+    "@astrojs/react": "^3.0.9",
+    "@astrojs/rss": "^4.0.4",
+    "@astrojs/sitemap": "^3.0.5",
+    "@astrojs/tailwind": "^5.1.0",
+    "daisyui": "^4.6.1",
+    "express": "^4.18.2",
+    "preact": "^10.19.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "three": "^0.161.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.161.2",
+    "astro": "^4.3.1"
+  }
+}

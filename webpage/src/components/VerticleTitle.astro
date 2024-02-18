@@ -1,0 +1,195 @@
+---
+
+---
+
+<div id="scrolling-titles" class="w-fit flex flex-row relative h-full">
+    <div class="flex flex-row single-grid items-center">
+        <h1 class="pl-5 scrolltitleRight text-center">
+            Peletic
+        </h1>
+        <h1 class="pl-5 scrolltitleRight text-center">
+            Peletic
+        </h1>
+        <h1 class="pl-5 scrolltitleRight text-center">
+            Peletic
+        </h1>
+        <h1 class="pl-5 scrolltitleRight text-center">
+            Peletic
+        </h1>
+    </div>
+    <div class="flex flex-row single-grid items-center">
+        <h1 class="pl-5 scrolltitleLeft text-center inline">
+            Peletic
+        </h1>
+        <h1 class="pl-5 scrolltitleLeft text-center inline">
+            Peletic
+        </h1>
+        <h1 class="pl-5 scrolltitleLeft text-center inline">
+            Peletic
+        </h1>
+    </div>
+</div>
+
+<script>
+    let currentlyAnimated = false
+    let isInside = false
+    const leftEl = document.getElementsByClassName("scrolltitleLeft")
+    const rightEl = document.getElementsByClassName("scrolltitleRight")
+
+
+    async function animateStart() {
+        currentlyAnimated = true
+        for (const el of [...leftEl, ...rightEl]) {
+            el.classList.toggle("upAnimated")
+            console.log("animating")
+        }
+
+        await new Promise(r => setTimeout(r, 250));
+
+        for (const el of [...leftEl, ...rightEl]) {
+            el.classList.toggle("upAnimated")
+        }
+        currentlyAnimated = false
+        return
+    }
+
+    async function animateEnd() {
+        currentlyAnimated = true
+        for (const el of [...leftEl, ...rightEl]) {
+            el.classList.toggle("downAnimated")
+        }
+        await new Promise(r => setTimeout(r, 250));
+
+        for (const el of [...leftEl, ...rightEl]) {
+            el.classList.toggle("downAnimated")
+        }
+        currentlyAnimated = false
+        return
+    }
+
+    document.getElementById("scrolling-titles").addEventListener('mouseenter', (e) => {
+        console.log("moseneter")
+        if (!currentlyAnimated) {
+            isInside = true
+            animateStart().then(() => {
+                if (!isInside) animateEnd()
+            })
+        }
+    })
+    document.getElementById("scrolling-titles").addEventListener('mouseleave', (e) => {
+        console.log("moslev")
+        isInside = false
+        if (!currentlyAnimated) {
+            animateEnd()
+        }
+    })
+
+</script>
+<style>
+    .scrolltitleLeft.downAnimated {
+        animation: downEnd 0.25s ease-in-out;
+    }
+
+    .scrolltitleRight.downAnimated {
+        animation: upEnd 0.25s ease-in-out;
+        transform: translateY(-150%) rotate(-180deg);
+    }
+
+
+    .scrolltitleLeft.upAnimated {
+        transform: translateY(-250%);
+        animation: downStart 0.25s ease-in-out;
+
+        writing-mode: vertical-lr;
+        text-orientation: sideways;
+        letter-spacing: -1px;
+    }
+
+    .scrolltitleRight.upAnimated {
+        transform: translateY(-150%) rotate(-180deg);
+        animation: upStart 0.25s ease-in-out;
+
+        writing-mode: vertical-lr;
+        text-orientation: sideways;
+        letter-spacing: -1px;
+    }
+
+    .scrolltitleRight {
+        writing-mode: vertical-lr;
+        text-orientation: sideways;
+        letter-spacing: -1px;
+        transform: translateY(-150%) rotate(-180deg);
+    }
+
+    .scrolltitleLeft {
+        writing-mode: vertical-lr;
+        text-orientation: sideways;
+        letter-spacing: -1px;
+        transform: translateY(-250%);
+    }
+
+
+    @keyframes upStart {
+        from {
+            -moz-transform: translateY(-150%) rotate(-180deg);
+            -webkit-transform: translateY(-150%) rotate(-180deg);
+            transform: translateY(-150%) rotate(-180deg);
+        }
+        to {
+            -moz-transform: translateY(-350%);
+            -webkit-transform: translateY(-350%);
+            transform: translateY(-350%) rotate(-180deg);
+        }
+    }
+
+    @keyframes downStart {
+        from {
+            -moz-transform: translateY(-250%);
+            -webkit-transform: translateY(-250%);
+            transform: translateY(-250%);
+        }
+        to {
+            -moz-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+    }
+
+    @keyframes downEnd {
+        to {
+            -moz-transform: translateY(-250%);
+            -webkit-transform: translateY(-250%);
+            transform: translateY(-250%);
+        }
+        from {
+            -moz-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+    }
+
+    @keyframes upEnd {
+        to {
+            -moz-transform: translateY(-150%) rotate(-180deg);
+            -webkit-transform: translateY(-150%) rotate(-180deg);
+            transform: translateY(-150%) rotate(-180deg);
+        }
+        from {
+            -moz-transform: translateY(-350%);
+            -webkit-transform: translateY(-350%);
+            transform: translateY(-350%) rotate(-180deg);
+        }
+    }
+
+
+    .single-grid {
+        display: grid;
+    }
+
+    .single-grid * {
+        margin-top: 25vh;
+        height: 25vh;
+        grid-row: auto;
+        grid-column: 1;
+    }
+</style>
