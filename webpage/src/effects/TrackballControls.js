@@ -1,11 +1,4 @@
-import {
-  EventDispatcher,
-  MathUtils,
-  MOUSE,
-  Quaternion,
-  Vector2,
-  Vector3
-} from 'three';
+import {EventDispatcher, MathUtils, MOUSE, Quaternion, Vector2, Vector3} from 'three';
 
 const _changeEvent = { type: 'change' };
 const _startEvent = { type: 'start' };
