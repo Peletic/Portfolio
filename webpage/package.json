@@ -8,7 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro preferences disable devToolbar ",
-    "deply": "npm run build && node ../server/index.js"
+    "deploy": "npm i && npm run build && node ../server/index.js"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^4.2.1",
