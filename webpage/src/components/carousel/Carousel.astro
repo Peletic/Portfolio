@@ -18,9 +18,9 @@ const {images, captions} = Astro.props
         <a class="prev" id="psd">&#10094;</a>
         <a class="next" id="psu">&#10095;</a>
     </div>
-    <div class="child z-30 w-full h-full justify-end flex align-bottom" style="text-align:center">
+    <div class="child z-30 w-full h-fit justify-self-end flex self-end text-center">
         {[...images].map(i => {
-            return (<span class="dot justify-self-end justify-end self-end content-end"/>)
+            return (<span class="dot"/>)
         })}
     </div>
 </div>
@@ -143,16 +143,14 @@ const {images, captions} = Astro.props
 
     /* The dots/bullets/indicators */
     .dot {
-        margin-top: auto;
-        cursor: pointer;
-        height: 15px;
         width: 15px;
-        align-self: flex-end;
         background-color: #bbb;
         border-radius: 50%;
         display: inline-block;
+
         transition: background-color 0.6s ease;
-        vertical-align: bottom;
+
+        height: 15px;
     }
 
     .active, .dot:hover {
