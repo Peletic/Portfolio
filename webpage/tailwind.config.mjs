@@ -31,15 +31,15 @@ export default {
     themes: [
       {
         dark: {
-          "primary": "#77939f",
+          "primary": "#b1c5c4",
 
-          "secondary": "#c23e7e",
+          "secondary": "#4b5665",
 
-          "accent": "#e0a177",
+          "accent": "#898fa6",
 
-          "neutral": "#2f2f49",
+          "neutral": "#111717",
 
-          "base-100": "#620c24",
+          "base-100": "#b1c5c4",
 
           "info": "#3c807b",
 
