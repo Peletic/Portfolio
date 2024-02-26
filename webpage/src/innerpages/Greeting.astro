@@ -1,0 +1,112 @@
+---
+//    I've done some freelance work in the gaming industry, autonomous stock trading, stock trading toolsuites, authentication, a few payment processors, and a handful of one-on-one clients.
+
+import {Button} from "../components/ui/moving-border";
+import { TracingBeam } from "../components/ui/tracing-beam";
+import ThreeLines from "../components/svg/ThreeLines.astro";
+import {cn} from "../components/utils/cn";
+const stars = new Array(100).fill(true)
+---
+<!--<TracingBeam client:load/>-->
+<div id="background" class="fixed w-full min-h-full overflow-x-hidden overflow-y-clip">
+    <div class="space space3"/>
+    <div class="space space2"/>
+    <div class="space space1"/>
+    {stars.map((el, idx) => (
+            <span
+
+                    class={
+                        "animate-meteor-effect absolute top-1/2 left-1/2 h-0.5 w-0.5 rounded-[9999px] bg-slate-500 shadow-[0_0_0_1px_#ffffff10] rotate-[215deg]"
+                    }
+                    style=`
+                        top: ${Math.floor(Math.random()  * 100)-10 + "%"};;
+                        left: ${Math.floor(Math.random()  * 100)-10 + "%"};
+                        animation-delay: ${(Math.random() * (0.8 - 0.2) + 0.2) + "s"};
+                        animation-duration: ${Math.floor(Math.random() * (10 - 2) + 2) + 1+ "s"};
+        `
+            ></span>
+    ))}
+
+</div>
+
+<div class="h-full w-full block relative px-[19.5vw] py-[19.5vh]" style="color: #bdb284">
+
+
+    <div class="min-h-full w-full my-auto flex flex-row rounded-3xl font-bold" style="background: #031a00">
+        <div class=" w-3/5 float-left h-full pl-6 py-7 lg:pl-14 lg:py-10 block">
+            <h1 class="text-xl lg:text-6xl p-6 lg:p-10">
+                👋 I'm Peletic
+            </h1>
+            <p class="p-4 lg:p-10 text-xs lg:text-base leading-6">This is my portfolio!  <br><br>
+                I'm a high school student and through two years of dedicated practice, I've gained fluency in Java, Javascript, and Typescript. At the same time I got to know C++, C#, Rust, Kotlin, Shell, and Bash. I've built websites with Vanilla HTML/JS, React.js, Next.js, Astro.js, and styling dependencies such as Boostrap, Tailwind, Aceternity, DaisyUI, and Shadcn/ui.
+
+            </p>
+            <a class="px-2 lg:px-10 w-fit static block" >
+                <Button
+                        client:load
+                        class="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 mx-auto"
+                        borderRadius="0.5rem"
+                >
+                    LEARN MORE
+                </Button>
+
+            </a>
+        </div>
+        <div class="w-2/5 min-h-full float-right bg-contain bg-no-repeat bg-right-bottom" style="background-image: url('clippeddogdone.png')">
+
+        </div>
+    </div>
+   <!-- <div class="h-full bg-secondary">
+
+    </div>-->
+
+</div>
+
+
+<style>
+    #background {
+        background: radial-gradient(circle at bottom, navy 0, black 100%);
+    }
+
+    .space {
+        background: rgba(128, 0, 128, 0.1) center / 200px 200px round;
+        border: 1px solid rgba(128, 0, 128, 0.24);
+        border-left: none;
+        border-right: none;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .space1 {
+        transform: rotate(45deg);
+        animation: space 90s ease-in-out infinite;
+    }
+
+    .space2 {
+        transform: rotate(90deg);
+        animation: space 100s ease-in-out infinite;
+    }
+
+    .space3 {
+        transform: rotate(135deg);
+        animation: space 110s ease-in-out infinite;
+    }
+
+    @keyframes space {
+        40% {
+            opacity: 0.75;
+        }
+        50% {
+            opacity: 0.25;
+        }
+        60% {
+            opacity: 0.75;
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>

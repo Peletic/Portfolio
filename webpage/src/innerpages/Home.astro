@@ -1,0 +1,41 @@
+---
+
+import {FloatingNav} from "../components/ui/floating-navbar";---
+<FloatingNav client:only="react" navItems={[
+    {
+        name: "Home",
+        link: "/",
+
+    },
+    {
+        name: "Contact",
+        link: "/contact"
+    },
+]}>asdw</FloatingNav>
+
+<div id="wrapper" class="grid w-full h-full bg-neutral rounded text-primary">
+
+    <div class="w-full flex flex-row">
+        <div class="h-full">
+            <h1 class="font-extrabold text-2xl mt-5 ml-2">
+
+            </h1>
+            <!--  <Carousel images={["img1.png"]} captions={[""]}></Carousel>-->
+        </div>
+
+    </div>
+    <h1 class="font-extrabold text-9xl m-auto">
+        P
+    </h1>
+</div>
+<style>
+    #wrapper {
+
+        background: linear-gradient(180deg, rgb(169, 138, 154), rgb(163, 146, 158), rgb(142, 150, 163));
+    }
+
+    #wrapper * {
+        grid-row: 1;
+        grid-column: 1;
+    }
+</style>
