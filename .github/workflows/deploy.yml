@@ -1,5 +1,6 @@
 on:
-  push
+  release:
+    types: [published]
 
 jobs:
   run_pull:
@@ -14,7 +15,6 @@ jobs:
           password: ${{ secrets.SSH_PASS }}
           script: |
             eval "$(ssh-agent -s)"
-          
             export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh                
             cd ~/Portfolio/webpage
