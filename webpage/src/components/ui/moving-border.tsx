@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import { useRef } from "react";
 import { cn } from "../utils/cn";
+import {$page} from "../../states";
 
 export function Button({
                            borderRadius = "1.75rem",
@@ -39,6 +40,11 @@ export function Button({
                 borderRadius: borderRadius,
             }}
             {...otherProps}
+            onClick={e=>{
+                console.log("clicked!")
+                $page.set('home')
+                console.log($page.get())
+            }}
         >
             <div
                 className="absolute inset-0"
