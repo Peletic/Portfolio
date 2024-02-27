@@ -1,146 +1,51 @@
 ---
-
 import {ContainerScroll} from "../components/ui/container-scroll-animation";
+import WeirdGrid from "../components/svg/WeirdGrid.astro";
 ---
-<div id="home" class="w-full h-full">
+<div id="home" class="w-full h-full bg-primary px-[30rem] py-44">
 
-
-    <div id="wrapper" class="grid w-full h-full bg-neutral rounded text-primary">
-
-        <div class="flex flex-col overflow-hidden">
-            <ContainerScroll
-                    users={[
-                        {
-                            name: "Manu Arora",
-                            designation: "Founder, Algochurn",
-                            image: "https://picsum.photos/id/10/300/300",
-                            badge: "Mentor",
-                        },
-                        {
-                            name: "Sarah Singh",
-                            designation: "Founder, Sarah's Kitchen",
-                            image: "https://picsum.photos/id/11/300/300",
-                            badge: "Mentor",
-                        },
-                        {
-                            name: "John Doe",
-                            designation: "Software Engineer, Tech Corp",
-                            image: "https://picsum.photos/id/12/300/300",
-                            badge: "Mentor",
-                        },
-                        {
-                            name: "Jane Smith",
-                            designation: "Product Manager, Innovate Inc",
-                            image: "https://picsum.photos/id/13/300/300",
-                            badge: "Mentor",
-                        },
-                        {
-                            name: "Robert Johnson",
-                            designation: "Data Scientist, DataWorks",
-                            image: "https://picsum.photos/id/14/300/300",
-                            badge: "Mentor",
-                        },
-                        {
-                            name: "Emily Davis",
-                            designation: "UX Designer, DesignHub",
-                            image: "https://picsum.photos/id/15/300/300",
-                            badge: "Mentor",
-                        },
-                        {
-                            name: "Michael Miller",
-                            designation: "CTO, FutureTech",
-                            image: "https://picsum.photos/id/16/300/300",
-                            badge: "Mentor",
-                        },
-                        {
-                            name: "Sarah Brown",
-                            designation: "CEO, StartUp",
-                            image: "https://picsum.photos/id/17/300/300",
-                        },
-                        {
-                            name: "James Wilson",
-                            designation: "DevOps Engineer, CloudNet",
-                            image: "https://picsum.photos/id/18/300/300",
-                            badge: "Something",
-                        },
-                        {
-                            name: "Patricia Moore",
-                            designation: "Marketing Manager, MarketGrowth",
-                            image: "https://picsum.photos/id/19/300/300",
-                            badge: "Mentor",
-                        },
-                        {
-                            name: "Richard Taylor",
-                            designation: "Frontend Developer, WebSolutions",
-                            image: "https://picsum.photos/id/20/300/300",
-                        },
-                        {
-                            name: "Linda Anderson",
-                            designation: "Backend Developer, ServerSecure",
-                            image: "https://picsum.photos/id/21/300/300",
-                        },
-                        {
-                            name: "William Thomas",
-                            designation: "Full Stack Developer, FullStack",
-                            image: "https://picsum.photos/id/22/300/300",
-                            badge: "Badger",
-                        },
-                        {
-                            name: "Elizabeth Jackson",
-                            designation: "Project Manager, ProManage",
-                            image: "https://picsum.photos/id/23/300/300",
-                            badge: "Mentor",
-                        },
-                        {
-                            name: "David White",
-                            designation: "Database Administrator, DataSafe",
-                            image: "https://picsum.photos/id/24/300/300",
-                            badge: "Advocate",
-                        },
-                        {
-                            name: "Jennifer Harris",
-                            designation: "Network Engineer, NetConnect",
-                            image: "https://picsum.photos/id/25/300/300",
-                        },
-                        {
-                            name: "Charles Clark",
-                            designation: "Security Analyst, SecureIT",
-                            image: "https://picsum.photos/id/26/300/300",
-                        },
-                        {
-                            name: "Susan Lewis",
-                            designation: "Systems Analyst, SysAnalyse",
-                            image: "https://picsum.photos/id/27/300/300",
-                        },
-                        {
-                            name: "Joseph Young",
-                            designation: "Mobile Developer, AppDev",
-                            image: "https://picsum.photos/id/28/300/300",
-                            badge: "Mentor",
-                        },
-                        {
-                            name: "Margaret Hall",
-                            designation: "Quality Assurance, BugFree",
-                            image: "https://picsum.photos/id/29/300/300",
-                            badge: "Developer",
-                        },
-                    ]}
-                    titleComponent={null}
-            />
+    <div class="w-full h-[60vh] relative grid">
+        <a class="row-end-1 col-end-1">
+            <WeirdGrid class="row-end-1 col-end-1" client:load width="100%" height="100%" viewbox="0 0 50 30.049" stroke="oklch(0.751423 0.020315 193.074)"/></a>
+        <div class="p-16 mt-14 w-full h-fit m-auto relative block font-medium row-end-1 col-end-1">
+            <h1 class="text-5xl drop-shadow-lg leading-[3.2rem]"><a class="text-base-300">Hey! </a><a>I'm Peletic, a high school student skilled in Java,
+                Javascript, Typescript and much more.</a></h1>
+            <h3 class="drop-shadow-lg mt-5 font-light">C++, C#, Rust, Kotlin, Shell, Bash | Vanilla HTML, Reactjs, Nextjs, Astrojs</h3>
         </div>
-        <h1 class="font-extrabold text-9xl m-auto">
-            P
-        </h1>
     </div>
-    <style>
-        #wrapper {
 
-            background: linear-gradient(180deg, rgb(169, 138, 154), rgb(163, 146, 158), rgb(142, 150, 163));
-        }
+    <div class="">
+        <ContainerScroll titleComponent="My Work!" users={
+            [
+                {
+                    "user": "Overview",
+                    "designation": "Github",
+                    "image": "gh.png"
+                },
+                {
+                    "user": "Personal",
+                    "designation": "Postcard",
+                    "image": "postcard.jpg"
+                },
+                {
+                    "user": "Contributor",
+                    "designation": "Game Service",
+                    "image": "bm.png"
+                },
+                {
+                    "user": "Freelancing",
+                    "designation": "Trading Tools",
+                    "image": "trade.png"
+                },
+                {
+                    "user": "Freelancing",
+                    "designation": "Account Management",
+                    "image": "home.png"
+                }
+            ]
+        }>
 
-        #wrapper * {
-            grid-row: 1;
-            grid-column: 1;
-        }
-    </style>
+        </ContainerScroll>
+    </div>
+
 </div>
