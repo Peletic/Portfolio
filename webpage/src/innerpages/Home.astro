@@ -1,102 +1,82 @@
 ---
 import {ContainerScroll} from "../components/ui/container-scroll-animation";
 import WeirdGrid from "../components/svg/WeirdGrid.astro";
+import Section from "../components/Section.astro";
 ---
-<div id="home" class="bg-primary px-[30rem] py-44">
+<div id="home" class="bg-primary min-h-full py-16 flex flex-col px-[10vw]">
+    <div class="flex flex-row mx-auto h-fit my-6">
+        <div class="w-full h-full relative border-secondary bg-accent rounded-[30px] border-solid border-4 flex flex-row p-4">
+            <div class="p-2 inline w-auto h-full relative font-medium row-end-1 col-end-1">
+                <h1 class="text-4xl drop-shadow-lg font-medium leading-[2.3rem] text-primary"><a class="text-secondary">Hey! </a><a>I'm Peletic, a
+                    high school student.</a></h1>
+                <h3 class="drop-shadow-lg mt-5 font-light text-accent">Learning C++, C#, Rust, Kotlin, Shell, Bash | Vanilla HTML, Reactjs,
+                    Nextjs, Astrojs</h3>
+            </div>
+            <div class="inline relative overflow-hidden w-4/6 h-auto py-6 pt-14">
 
-    <div class="w-full h-[60vh] relative grid">
-        <a class="row-end-1 col-end-1">
-            <WeirdGrid class="row-end-1 col-end-1"  width="100%" height="100%" viewbox="0 0 50 30.049" stroke="oklch(0.751423 0.020315 193.074)"/></a>
-        <div class="p-16 mt-14 w-full h-fit m-auto relative block font-medium row-end-1 col-end-1">
-            <h1 class="text-5xl drop-shadow-lg leading-[3.2rem]"><a class="text-base-300">Hey! </a><a>I'm Peletic, a high school student skilled in Java,
-                Javascript, Typescript and much more.</a></h1>
-            <h3 class="drop-shadow-lg mt-5 font-light">C++, C#, Rust, Kotlin, Shell, Bash | Vanilla HTML, Reactjs, Nextjs, Astrojs</h3>
+                <ContainerScroll client:only="react" titleComponent={null} users={
+                    [
+                        {
+                            "user": "Overview",
+                            "designation": "Github",
+                            "image": "gh.png"
+                        },
+                        {
+                            "user": "Personal",
+                            "designation": "Postcard",
+                            "image": "postcard.jpg"
+                        },
+                        {
+                            "user": "Contributor",
+                            "designation": "Game Service",
+                            "image": "bm.png"
+                        },
+                        {
+                            "user": "Freelancing",
+                            "designation": "Trading Tools",
+                            "image": "trade.png"
+                        },
+                        {
+                            "user": "Freelancing",
+                            "designation": "Account Management",
+                            "image": "home.png"
+                        },
+                        {
+                            "user": "Overview",
+                            "designation": "Github",
+                            "image": "gh.png"
+                        },
+                        {
+                            "user": "Personal",
+                            "designation": "Postcard",
+                            "image": "postcard.jpg"
+                        },
+                        {
+                            "user": "Contributor",
+                            "designation": "Game Service",
+                            "image": "bm.png"
+                        },
+                        {
+                            "user": "Freelancing",
+                            "designation": "Trading Tools",
+                            "image": "trade.png"
+                        }
+                    ]
+                }>
+                </ContainerScroll>
+            </div>
         </div>
+
+        <Section class:list="w-2/5">
+            Test
+        </Section>
+
+
     </div>
+    <div class="flex flex-row mx-auto h-[50vh] my-6">
+        <Section class:list="w-2/5">
+            Test
+        </Section>
 
-    <div class="flex flex-col relative overflow-hidden" >
-
-        <ContainerScroll client:only="react" titleComponent={null} users={
-            [
-                {
-                    "user": "Overview",
-                    "designation": "Github",
-                    "image": "gh.png"
-                },
-                {
-                    "user": "Personal",
-                    "designation": "Postcard",
-                    "image": "postcard.jpg"
-                },
-                {
-                    "user": "Contributor",
-                    "designation": "Game Service",
-                    "image": "bm.png"
-                },
-                {
-                    "user": "Freelancing",
-                    "designation": "Trading Tools",
-                    "image": "trade.png"
-                },
-                {
-                    "user": "Freelancing",
-                    "designation": "Account Management",
-                    "image": "home.png"
-                },
-                {
-                    "user": "Overview",
-                    "designation": "Github",
-                    "image": "gh.png"
-                },
-                {
-                    "user": "Personal",
-                    "designation": "Postcard",
-                    "image": "postcard.jpg"
-                },
-                {
-                    "user": "Contributor",
-                    "designation": "Game Service",
-                    "image": "bm.png"
-                },
-                {
-                    "user": "Freelancing",
-                    "designation": "Trading Tools",
-                    "image": "trade.png"
-                },
-                {
-                    "user": "Freelancing",
-                    "designation": "Account Management",
-                    "image": "home.png"
-                },
-                {
-                    "user": "Overview",
-                    "designation": "Github",
-                    "image": "gh.png"
-                },
-                {
-                    "user": "Personal",
-                    "designation": "Postcard",
-                    "image": "postcard.jpg"
-                },
-                {
-                    "user": "Contributor",
-                    "designation": "Game Service",
-                    "image": "bm.png"
-                },
-                {
-                    "user": "Freelancing",
-                    "designation": "Trading Tools",
-                    "image": "trade.png"
-                },
-                {
-                    "user": "Freelancing",
-                    "designation": "Account Management",
-                    "image": "home.png"
-                }
-            ]
-        }>
-
-        </ContainerScroll>
-   </div>
-
+    </div>
 </div>

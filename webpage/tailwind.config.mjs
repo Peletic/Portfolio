@@ -11,7 +11,27 @@ export default {
   theme: {
 
     extend: {
+      colors: {
+        "primary": "#111717",
 
+        "secondary": "#4b5665",
+
+        "accent": "#37445e",
+
+        "neutral": "#898fa6",
+
+        "heavy": "#020c0c",
+
+        "base-100": "#b1c5c4",
+
+        "info": "#3c807b",
+
+        "success": "#69a050",
+
+        "warning": "#e18b79",
+
+        "error": "#6f0e1f",
+      },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
       },
@@ -30,25 +50,7 @@ export default {
   daisyui: {
     themes: [
       {
-        dark: {
-          "primary": "#b1c5c4",
 
-          "secondary": "#4b5665",
-
-          "accent": "#898fa6",
-
-          "neutral": "#111717",
-
-          "base-100": "#b1c5c4",
-
-          "info": "#3c807b",
-
-          "success": "#69a050",
-
-          "warning": "#e18b79",
-
-          "error": "#6f0e1f",
-        },
         postcard: {
           "primary": "#ffd093",
 
