@@ -9,4 +9,6 @@ app.get('/', app.use(express.static('./dist')))
 })*/
 let server = https.createServer({key: fs.readFileSync('/etc/nginx/private'), cert: fs.readFileSync('/etc/nginx/origin')},app)
 
-server.listen(8080)
+server.listen(8080, (e) => {
+  console.log("Listening!")
+})
