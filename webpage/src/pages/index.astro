@@ -13,25 +13,25 @@ import {atom} from 'nanostores'
 ---
 
 
-<Layout>
+<Layout title="Home">
     <main id="main" data-theme="dark" class="w-full h-full bg-neutral " >
 
         <Greeting/>
         <Home/>
 
     </main>
+    <script>
+        import {$page} from "../states/index.js"
+        console.log(document.body)
+        $page.subscribe((value) => {
+            console.log(value)
+            if (value === "greeting") {
+                document.getElementById("home").hidden = true
+                document.getElementById("greeting").hidden = false
+            } else {
+                document.getElementById("home").hidden = false
+                document.getElementById("greeting").hidden = true
+            }
+        })
+    </script>
 </Layout>
-<script>
-    import {$page} from "../states/index.js"
-    console.log(document.body)
-    $page.subscribe((value) => {
-        console.log(value)
-        if (value === "greeting") {
-            document.getElementById("home").hidden = true
-            document.getElementById("greeting").hidden = false
-        } else {
-            document.getElementById("home").hidden = false
-            document.getElementById("greeting").hidden = true
-        }
-    })
-</script>
