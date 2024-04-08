@@ -23,16 +23,14 @@ import {$page} from "../states";
     </main>
     <script>
         import {$page} from "../states/index.js"
-        console.log(document.body)
-        document.getElementById("home").hidden = true
         $page.subscribe((value) => {
             console.log(value)
             if (value === "greeting") {
-                document.getElementById("home").hidden = true
-                document.getElementById("greeting").hidden = false
-            } else {
-                document.getElementById("home").hidden = false
-                document.getElementById("greeting").hidden = true
+                document.getElementById("greeting").style.display = "block"
+                document.getElementById("home").style.display = "none"
+            } else if (value === "home"){
+                document.getElementById("home").style.display = ""
+                document.getElementById("greeting").style.display = "none"
             }
         })
     </script>
