@@ -1,0 +1,40 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Hi there! 🐈</h1>
+			<p>
+				I'm a high school student and through two years of dedicated practice, I've gained fluency in Java,
+				Javascript, and Typescript. At the same time I've been getting to know C++, C#, Rust, Kotlin, Shell, and Bash.
+				I've built websites with Vanilla HTML/JS, React.js, Next.js, Astro.js, and styling dependencies such
+				as Bootstrap, Tailwind, Aceternity, DaisyUI, and Shadcn/ui.
+			</p>
+			<p>I enjoy</p>
+			<ul>
+				<li>Computer games</li>
+				<li>Making cheater programs for single-player computer games</li>
+				<li>Overengineering <code>(view ../pages/[...slug])</code></li>
+				<li>Learning good coding practices</li>
+				<li>Not using aforementioned good coding practices</li>
+			</ul>
+			<p>
+				This is my (very good) portfolio website. This paragraph block should probably be a better introduction, however, I am purely stalling to take up whitespace on the page.
+			</p>
+			<p>
+				This page was made with <a href="https://astro.build/">Astro</a> and a shocking lack of care.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
